@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+ <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">HTA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Enroll Now</h1>
+                <p>Select your learning path and take the first step towards your trading goals.</p>
+            </div>
+        </section>
+
+        <section class="enroll-section">
+            <div class="container">
+                <div class="enroll-grid">
+                    <div class="enroll-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Enroll in an Online Course</h3>
+                        <p>Get immediate, lifetime access to our online courses. Learn at your own pace from anywhere in the world.</p>
+                        <form class="enroll-form" id="online-form">
+                            <div class="form-group">
+                                <label for="online-course">Choose Your Course</label>
+                                <select id="online-course" name="online-course" required>
+                                    <option value="">-- Select a Course --</option>
+                                    <option value="stock-foundation">Stock Market Foundation - ₹7,999</option>
+                                    <option value="algo-python">Algorithmic Trading in Python - ₹29,999</option>
+                                    <option value="options-masterclass-online">Options Masterclass (Online) - ₹24,999</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="online-name">Full Name</label>
+                                <input type="text" id="online-name" name="name" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="online-email">Email Address</label>
+                                <input type="email" id="online-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="online-password">Create Password</label>
+                                <input type="password" id="online-password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                        <div id="online-form-message"></div>
+                    </div>
+
+                    <div class="enroll-card">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Register for an Offline Batch</h3>
+                        <p>Join our interactive classroom sessions in Hatti. Fill out the form and our team will contact you to confirm your seat.</p>
+                        <form class="enroll-form" id="offline-form">
+                             <div class="form-group">
+                                <label for="offline-course">Course of Interest</label>
+                                <select id="offline-course" name="offline-course" required>
+                                    <option value="">-- Select a Course --</option>
+                                    <option value="day-trader">The Complete Day Trader - ₹19,999</option>
+                                    <option value="options-masterclass-offline">Options Masterclass (Offline) - ₹24,999</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="offline-name">Full Name</label>
+                                <input type="text" id="offline-name" name="offline-name" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="offline-phone">Phone Number</label>
+                                <input type="tel" id="offline-phone" name="offline-phone" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register My Interest</button>
+                        </form>
+                        <div id="offline-form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <details>
+                        <summary>What payment methods do you accept for online courses?</summary>
+                        <p>We accept all major credit cards, debit cards, UPI, and net banking through our secure payment gateway.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>What happens after I register for an offline batch?</summary>
+                        <p>Our admissions team from the Hatti campus will call you within 24 hours to confirm your details, explain the payment process, and answer any questions you may have about the upcoming batch.</p>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Do you offer any discounts or EMI options?</summary>
+                        <p>Yes, we offer EMI options for all courses above ₹15,000. Please contact our support team to learn more about current offers and discounts.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HTA</h3>
+                    <p>Hatti Trading Academy</p>
+                    <p>Empowering traders with knowledge and confidence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Trading Street, Hatti, Karnataka, 584115</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> support@hta.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hatti Trading Academy. All Rights Reserved.</p>
+                <p class="disclaimer">Disclaimer: Trading involves substantial risk and is not suitable for all investors. All content is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    // --- SCRIPT FOR OFFLINE FORM ---
+    const offlineForm = document.getElementById('offline-form');
+    const offlineFormMessage = document.getElementById('offline-form-message');
+
+    offlineForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(offlineForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('http://localhost:3000/api/register-offline', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (response.ok) {
+                offlineFormMessage.textContent = result.message;
+                offlineFormMessage.style.color = 'green';
+                offlineForm.reset();
+            } else {
+                offlineFormMessage.textContent = 'Error: ' + result.message;
+                offlineFormMessage.style.color = 'red';
+            }
+        } catch (error) {
+            offlineFormMessage.textContent = 'A network error occurred. Please try again.';
+            offlineFormMessage.style.color = 'red';
+        }
+    });
+
+    // --- SCRIPT FOR NEW ONLINE REGISTRATION FORM ---
+    const onlineForm = document.getElementById('online-form');
+    const onlineFormMessage = document.getElementById('online-form-message');
+
+    onlineForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(onlineForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('http://localhost:3000/api/register-online', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (response.ok) {
+                onlineFormMessage.textContent = result.message;
+                onlineFormMessage.style.color = 'green';
+                onlineForm.reset();
+            } else {
+                onlineFormMessage.textContent = 'Error: ' + result.message;
+                onlineFormMessage.style.color = 'red';
+            }
+        } catch (error) {
+            onlineFormMessage.textContent = 'A network error occurred. Please try again.';
+            onlineFormMessage.style.color = 'red';
+        }
+    });
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">HTA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Account Login</h1>
+                <p>Welcome back! Please log in to access your courses.</p>
+            </div>
+        </section>
+
+        <section class="enroll-section">
+            <div class="container" style="max-width: 500px;">
+                <div class="enroll-card">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <h3>Login</h3>
+                    <form class="enroll-form" id="login-form">
+                         <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" autocomplete="current-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                    <div id="login-form-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        </footer>
+
+    <script>
+    const loginForm = document.getElementById('login-form');
+    const loginFormMessage = document.getElementById('login-form-message');
+
+    loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(loginForm);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                loginFormMessage.textContent = result.message;
+                loginFormMessage.style.color = 'green';
+                
+                // Store the token in the browser's localStorage
+                localStorage.setItem('token', result.token);
+                
+                // This code is now enabled. It waits 1 second then redirects.
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1000); // 1000 milliseconds = 1 second
+
+            } else {
+                loginFormMessage.textContent = 'Error: ' + result.message;
+                loginFormMessage.style.color = 'red';
+            }
+        } catch (error) {
+            loginFormMessage.textContent = 'A network error occurred. Please try again.';
+            loginFormMessage.style.color = 'red';
+        }
+    });
+</script>
+</body>
+</html>

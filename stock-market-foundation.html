@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Foundation - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HTA</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Stock Market Foundation</h1>
+            </div>
+        </section>
+
+        <section class="course-content-section">
+            <div class="container">
+                <div class="video-player">
+                    <p>Video content would be embedded here.</p>
+                </div>
+
+                <h2>About This Course</h2>
+                <p>This course is designed for absolute beginners who want to understand the fundamentals of the stock market. We will cover everything from basic terminology to placing your first trade, with a strong emphasis on risk management.</p>
+                
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>The fundamentals of stock market terminology.</li>
+                    <li>How to read and interpret candlestick charts.</li>
+                    <li>Basic principles of risk management.</li>
+                    <li>How to place your first trade with confidence.</li>
+                </ul>
+
+                <h3>Resources</h3>
+                <p><a href="#">Download Course Notes (PDF)</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        </footer>
+
+    <script>
+        const token = localStorage.getItem('token');
+        if (!token) {
+            // If no token is found, the user is not logged in.
+            // Redirect them to the login page immediately.
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

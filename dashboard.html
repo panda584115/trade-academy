@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        </header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Student Dashboard</h1>
+            </div>
+        </section>
+        <section class="dashboard-section">
+            <div class="container">
+                <h2>Welcome, <span id="user-name">Student</span>!</h2>
+                
+                <h3>Your Enrolled Courses</h3>
+                <div id="enrolled-courses-list" class="course-grid">
+                    <p>Loading your courses...</p>
+                </div>
+                
+                <button id="logout-button" class="btn btn-secondary">Logout</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        </footer>
+
+    <script>
+        const token = localStorage.getItem('token');
+        const userNameSpan = document.getElementById('user-name');
+        const courseListDiv = document.getElementById('enrolled-courses-list');
+
+        async function fetchUserData() {
+            try {
+                const response = await fetch('http://localhost:3000/api/dashboard', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    localStorage.removeItem('token');
+                    window.location.href = 'login.html';
+                    return;
+                }
+
+                const userData = await response.json();
+                userNameSpan.textContent = userData.name;
+                
+                const courses = userData.enrolledCourses;
+                if (courses && courses.length > 0) {
+                    courseListDiv.innerHTML = ''; // Clear the "Loading..." message
+                    courses.forEach(courseValue => {
+                        const courseCard = document.createElement('div');
+                        courseCard.className = 'course-card-simple';
+                        // Format the course name for display
+                        const courseName = courseValue.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        courseCard.innerHTML = `<h4>${courseName}</h4><a href="#">Go to Course</a>`;
+                        courseListDiv.appendChild(courseCard);
+                    });
+                } else {
+                    courseListDiv.innerHTML = '<p>You are not enrolled in any courses yet.</p>';
+                }
+
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
+
+        if (token) {
+            fetchUserData();
+        } else {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('logout-button').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

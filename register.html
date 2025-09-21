@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HTA</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Create an Account</h1>
+                <p>Join our community and get access to our online courses.</p>
+            </div>
+        </section>
+
+        <section class="enroll-section">
+            <div class="container" style="max-width: 500px;">
+                <div class="enroll-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Register</h3>
+                    <form class="enroll-form" id="register-form">
+                        <div class="form-group">
+                            <label for="course">Choose Your Course</label>
+                            <select id="course" name="online-course" required>
+                                <option value="">-- Select a Course --</option>
+                                <option value="stock-foundation">Stock Market Foundation</option>
+                                <option value="intermediate-trading">Intermediate Trading</option>
+                                <option value="options-masterclass">Options Trading Masterclass</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Create Password</label>
+                            <input type="password" id="password" name="password" autocomplete="new-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                    <div id="register-form-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        </footer>
+
+    <script>
+        const registerForm = document.getElementById('register-form');
+        const registerFormMessage = document.getElementById('register-form-message');
+
+        registerForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(registerForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // 👇 THIS IS THE DEBUGGING LINE I ADDED 👇
+            console.log("Data collected from form, sending to server:", data);
+
+            try {
+                const response = await fetch('http://localhost:3000/api/register-online', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    registerFormMessage.textContent = result.message + " You can now log in.";
+                    registerFormMessage.style.color = 'green';
+                    registerForm.reset();
+                } else {
+                    registerFormMessage.textContent = 'Error: ' + result.message;
+                    registerFormMessage.style.color = 'red';
+                }
+            } catch (error) {
+                registerFormMessage.textContent = 'A network error occurred. Please try again.';
+                registerFormMessage.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

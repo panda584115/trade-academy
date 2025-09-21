@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Hatti Trading Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">HTA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </nav>
+    </div>
+</header>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Courses</h1>
+                <p>Find the perfect program to match your goals, experience, and learning style.</p>
+            </div>
+        </section>
+
+        <section class="course-section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="online">Online</button>
+                    <button class="filter-btn" data-filter="offline">Offline</button>
+                    <button class="filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+
+                <div class="course-grid">
+                    <div class="course-card" data-category="online beginner">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Course Thumbnail">
+                        <div class="card-content">
+                            <div class="tags"><span class="tag-online">Online</span><span class="tag-beginner">Beginner</span></div>
+                            <h3>Stock Market Foundation</h3>
+                            <p>Master the basics of the stock market, from reading charts to placing your first trade.</p>
+                            <div class="card-footer">
+                                <span class="price">₹14,999</span>
+                                <a href="stock-market-foundation.html" class="btn btn-card">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card" data-category="offline advanced">
+                        <img src="https://images.unsplash.com/photo-1631568299492-759837910df3?q=80&w=2070" alt="Course Thumbnail">
+                        <div class="card-content">
+                            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-advanced">Advanced</span></div>
+                            <h3>Options Trading Masterclass</h3>
+                            <p>Learn multi-leg option strategies, hedging, and income generation.</p>
+                            <div class="card-footer">
+                                <span class="price">₹24,999</span>
+                                <a href="options-trading-masterclass.html" class="btn btn-card">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card" data-category="online advanced">
+                         <img src="https://images.unsplash.com/photo-1624953901718-f24ee3296023?q=80&w=1974" alt="Course Thumbnail">
+                        <div class="card-content">
+                            <div class="tags"><span class="tag-online">Online</span><span class="tag-advanced">Advanced</span></div>
+                            <h3>Intermediate Trading</h3>
+                            <p>Build and backtest your own automated trading strategies using Python and modern APIs.</p>
+                            <div class="card-footer">
+                                <span class="price">₹29,999</span>
+                                <a href="intermediate-trading.html" class="btn btn-card">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="course-card" data-category="offline beginner">
+                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070" alt="Course Thumbnail">
+                        <div class="card-content">
+                            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-beginner">Beginner</span></div>
+                            <h3>The Complete Day Trader</h3>
+                            <p>An immersive offline program covering intraday strategies, discipline, and live market analysis.</p>
+                            <div class="card-footer">
+                                <span class="price">₹49,999</span>
+                                <a href="complete-day-trader.html" class="btn btn-card">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HTA</h3>
+                    <p>Hatti Trading Academy</p>
+                    <p>Empowering traders with knowledge and confidence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">Courses</a></li>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                         <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Address, Hatti, Karnataka</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> support@hta.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hatti Trading Academy. All Rights Reserved.</p>
+                <p class="disclaimer">Disclaimer: Trading involves substantial risk and is not suitable for all investors. All content is for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Set active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                courseCards.forEach(card => {
+                    const categories = card.dataset.category;
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

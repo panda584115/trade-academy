@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const Contact = require('./models/Contact');
 const User = require('./models/User');
 const Registration = require('./models/Registration');
-const { protect } = require('./middleware/authmiddleware');
+const { protect } = require('./middleware/authMiddleware');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

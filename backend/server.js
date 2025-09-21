@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -6,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const Contact = require('./models/Contact');
 const User = require('./models/User');
 const Registration = require('./models/Registration');
-const { protect } = require('./middleware/authMiddleware');
+const { protect } = require('./middleware/authmiddleware');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,9 +16,7 @@ app.use(cors());
 app.use(express.static('../'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-const dbConnectionString = process.env.DB_CONNECTION_STRING;
-
+const dbConnectionString = "mongodb+srv://parashurammallat2006_db_user:WvfkBtJaDp2co1wz@cluster0.kinwz5k.mongodb.net/tradingAcademy?retryWrites=true&w=majority";
 mongoose.connect(dbConnectionString)
     .then(() => console.log("✅ Successfully connected to MongoDB!"))
     .catch(err => console.error("❌ Could not connect to MongoDB.", err));

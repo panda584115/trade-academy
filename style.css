@@ -634,3 +634,9 @@ section {
         grid-template-columns: 1fr;
     }
 }
+/* --- Logo Image Style --- */
+.logo-img {
+    height: 80px; /* You can adjust this value to make it bigger or smaller */
+    width: auto;
+    display: block;
+}

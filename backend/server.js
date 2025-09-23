@@ -37,23 +37,40 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
+// in backend/server.js
+
 app.post('/api/register-online', async (req, res) => {
     try {
         const { name, email, password } = req.body;
-        const selectedCourse = req.body['online-course'];
-        if (!selectedCourse) {
-            return res.status(400).json({ message: "Please select a course." });
-        }
+        const selectedCourse = req.body['online-course']; // This might be undefined, and that's okay now.
+
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: "An account with this email already exists." });
         }
+
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
-        const newUser = new User({ name, email, password: hashedPassword, enrolledCourses: [selectedCourse] });
+
+        // Create the user object
+        const newUserObject = {
+            name,
+            email,
+            password: hashedPassword
+        };
+
+        // If a course was selected, add it to the user object
+        if (selectedCourse) {
+            newUserObject.enrolledCourses = [selectedCourse];
+        }
+
+        const newUser = new User(newUserObject);
         await newUser.save();
+        
         res.status(201).json({ message: "User registered successfully!" });
+
     } catch (error) {
+        console.error("Error during user registration:", error);
         res.status(500).json({ message: "Server error during registration." });
     }
 });

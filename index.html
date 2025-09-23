@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeAcademy - Master the Markets</title>
+    <title>Future Bulls - Master the Markets</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +12,19 @@
 </head>
 <body>
 
- <header class="header">
+<header class="header">
     <div class="container">
         <nav class="navbar">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Trade Academy Logo" class="logo-img">
+                <img src="assets/logo.png" alt="Future Bulls Logo" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
             </ul>
-            <a href="register.html" class="btn btn-primary">Register</a>
+            <div id="auth-container"></div>
         </nav>
     </div>
 </header>
@@ -35,16 +34,17 @@
             <div class="container">
                 <h1>Master the Markets. Trade with Confidence.</h1>
                 <p>Join the premier trading academy for proven strategies and expert mentorship. Learn online from anywhere or offline at our office.</p>
+                
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Explore Online Courses</a>
-                    <a href="#" class="btn btn-secondary">View Offline Batches</a>
+                    <a href="courses.html#online" class="btn btn-primary">Explore Online Courses</a>
+                    <a href="courses.html#offline" class="btn btn-secondary">View Offline Batches</a>
                 </div>
             </div>
         </section>
 
         <section class="features">
             <div class="container">
-                <h2>TradeAcademy</h2>
+                <h2>Why Future Bulls?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <i class="fas fa-brain"></i>
@@ -60,28 +60,6 @@
                         <i class="fas fa-laptop"></i>
                         <h3>Flexible Learning</h3>
                         <p>Choose your path with our comprehensive online platform or interactive offline classes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2>What Our Students Are Saying</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>"The mentorship at TradeAcademy completely changed my trading. I went from inconsistent to confidently profitable in three months."</p>
-                        <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/60?u=1" alt="Student 1">
-                            <span>Anand R., Bangalore</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"Finally, a course that focuses on risk management. The offline classes were incredibly interactive and valuable."</p>
-                        <div class="testimonial-author">
-                            <img src="https://i.pravatar.cc/60?u=2" alt="Student 2">
-                            <span>Priya S., Bealgum</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -103,32 +81,32 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>TradeAcademy</h3>
-                    <p>TradeAcademy</p>
+                    <h3>Future Bulls</h3>
                     <p>Empowering traders with knowledge and confidence.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="courses.html">Courses</a>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="contact.html">Contact</a>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="auth.html">Login / Register</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Your Address, Hatti, Karnataka</p>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-envelope"></i> support@hta.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Address, Bailhongal, Karnataka</p>
+                    <p><i class="fas fa-phone"></i> +918495054184</p>
+                    <p><i class="fas fa-envelope"></i> support@futurebulls.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Hatti Trading Academy. All Rights Reserved.</p>
+                <p>&copy; 2025 Future Bulls. All Rights Reserved.</p>
                 <p class="disclaimer">Disclaimer: Trading involves substantial risk and is not suitable for all investors. All content is for educational purposes only.</p>
             </div>
         </div>
     </footer>
 
+<script src="main.js"></script>
 </body>
 </html>

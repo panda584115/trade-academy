@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intermediate Trading - Hatti Trading Academy</title>
+    <title>Intermediate Trading - Future Bulls</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +15,15 @@
     <div class="container">
         <nav class="navbar">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Trade Academy Logo" class="logo-img">
+                <img src="assets/logo.png" alt="Future Bulls Logo" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
             </ul>
-            <a href="register.html" class="btn btn-primary">Register</a>
+            <div id="auth-container"></div>
         </nav>
     </div>
 </header>
@@ -48,14 +47,33 @@
                 </ul>
                 <h3>Resources</h3>
                 <p><a href="#">Download Trading Plan Template (PDF)</a></p>
+
+                <!-- 👇 "BUY NOW" BUTTON ADDED HERE 👇 -->
+                <a href="#" id="buy-now-button" class="btn btn-primary" style="margin-top: 20px;">Buy Now - ₹29,999</a>
             </div>
         </section>
     </main>
     <footer class="footer">
-        </footer>
+        <!-- (Your footer code should be here) -->
+    </footer>
+
+    <!-- 👇 OLD SCRIPT REMOVED AND REPLACED WITH THIS NEW SMART SCRIPT 👇 -->
     <script>
-        const token = localStorage.getItem('token');
-        if (!token) { window.location.href = 'login.html'; }
+        const buyNowButton = document.getElementById('buy-now-button');
+
+        buyNowButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            const token = localStorage.getItem('token');
+
+            if (token) {
+                // If logged in, go to checkout for this specific course
+                window.location.href = 'checkout.html?course=intermediate-trading';
+            } else {
+                // If not logged in, go to register for this specific course
+                window.location.href = 'register.html?course=intermediate-trading';
+            }
+        });
     </script>
+<script src="main.js"></script>
 </body>
 </html>

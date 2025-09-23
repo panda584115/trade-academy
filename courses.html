@@ -15,16 +15,15 @@
     <div class="container">
         <nav class="navbar">
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Trade Academy Logo" class="logo-img">
+                <img src="assets/logo.png" alt="Future Bulls Logo" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
             </ul>
-            <a href="register.html" class="btn btn-primary">Register</a>
+            <div id="auth-container"></div>
         </nav>
     </div>
 </header>
@@ -46,114 +45,109 @@
                     <button class="filter-btn" data-filter="advanced">Advanced</button>
                 </div>
 
-                <div class="course-grid">
-                    <div class="course-card" data-category="online beginner">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Course Thumbnail">
-                        <div class="card-content">
-                            <div class="tags"><span class="tag-online">Online</span><span class="tag-beginner">Beginner</span></div>
-                            <h3>Stock Market Foundation</h3>
-                            <p>Master the basics of the stock market, from reading charts to placing your first trade.</p>
-                            <div class="card-footer">
-                                <span class="price">₹14,999</span>
-                                <a href="stock-market-foundation.html" class="btn btn-card">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-card" data-category="offline advanced">
-                        <img src="https://images.unsplash.com/photo-1631568299492-759837910df3?q=80&w=2070" alt="Course Thumbnail">
-                        <div class="card-content">
-                            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-advanced">Advanced</span></div>
-                            <h3>Options Trading Masterclass</h3>
-                            <p>Learn multi-leg option strategies, hedging, and income generation.</p>
-                            <div class="card-footer">
-                                <span class="price">₹24,999</span>
-                                <a href="options-trading-masterclass.html" class="btn btn-card">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="course-card" data-category="online advanced">
-                         <img src="https://images.unsplash.com/photo-1624953901718-f24ee3296023?q=80&w=1974" alt="Course Thumbnail">
-                        <div class="card-content">
-                            <div class="tags"><span class="tag-online">Online</span><span class="tag-advanced">Advanced</span></div>
-                            <h3>Intermediate Trading</h3>
-                            <p>Build and backtest your own automated trading strategies using Python and modern APIs.</p>
-                            <div class="card-footer">
-                                <span class="price">₹29,999</span>
-                                <a href="intermediate-trading.html" class="btn btn-card">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="course-card" data-category="offline beginner">
-                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2070" alt="Course Thumbnail">
-                        <div class="card-content">
-                            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-beginner">Beginner</span></div>
-                            <h3>The Complete Day Trader</h3>
-                            <p>An immersive offline program covering intraday strategies, discipline, and live market analysis.</p>
-                            <div class="card-footer">
-                                <span class="price">₹49,999</span>
-                                <a href="complete-day-trader.html" class="btn btn-card">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="course-grid">
+    <div class="course-card" data-category="online beginner">
+        <img src="assets/foundation.jpg" alt="Stock market candlestick chart">
+        <div class="card-content">
+            <div class="tags"><span class="tag-online">Online</span><span class="tag-beginner">Beginner</span></div>
+            <h3>Stock Market Foundation</h3>
+            <p>Master the basics of the stock market, from reading charts to placing your first trade.</p>
+            <div class="card-footer">
+                <span class="price">₹14,999</span>
+                <a href="stock-market-foundation.html" class="btn btn-card">View Details</a>
             </div>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>HTA</h3>
-                    <p>Hatti Trading Academy</p>
-                    <p>Empowering traders with knowledge and confidence.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="courses.html">Courses</a></li>
-                         <li><a href="#">About Us</a></li>
-                         <li><a href="contact.html">Contact</a></li>
-                         <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Your Address, Hatti, Karnataka</p>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-envelope"></i> support@hta.com</p>
-                </div>
+        </div>
+    </div>
+    <div class="course-card" data-category="offline advanced">
+        <img src="assets/options.jpg" alt="Complex options trading data visualization">
+        <div class="card-content">
+            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-advanced">Advanced</span></div>
+            <h3>Options Trading Masterclass</h3>
+            <p>Learn multi-leg option strategies, hedging, and income generation.</p>
+            <div class="card-footer">
+                <span class="price">₹24,999</span>
+                <a href="options-trading-masterclass.html" class="btn btn-card">View Details</a>
             </div>
+        </div>
+    </div>
+    <div class="course-card" data-category="online advanced">
+         <img src="assets/intermediate.jpg" alt="Trader analyzing multiple charts on a screen">
+        <div class="card-content">
+            <div class="tags"><span class="tag-online">Online</span><span class="tag-advanced">Advanced</span></div>
+            <h3>Intermediate Trading</h3>
+            <p>Build and backtest your own automated trading strategies using Python and modern APIs.</p>
+            <div class="card-footer">
+                <span class="price">₹29,999</span>
+                <a href="intermediate-trading.html" class="btn btn-card">View Details</a>
+            </div>
+        </div>
+    </div>
+     <div class="course-card" data-category="offline beginner">
+        <img src="assets/day-trader.jpg" alt="Day trader's focused computer setup">
+        <div class="card-content">
+            <div class="tags"><span class="tag-offline">Offline</span><span class="tag-beginner">Beginner</span></div>
+            <h3>The Complete Day Trader</h3>
+            <p>An immersive offline program covering intraday strategies, discipline, and live market analysis.</p>
+            <div class="card-footer">
+                <span class="price">₹49,999</span>
+                <a href="complete-day-trader.html" class="btn btn-card">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Hatti Trading Academy. All Rights Reserved.</p>
+                <p>&copy; 2025 Future Bulls. All Rights Reserved.</p>
                 <p class="disclaimer">Disclaimer: Trading involves substantial risk and is not suitable for all investors. All content is for educational purposes only.</p>
             </div>
         </div>
     </footer>
+<script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
 
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const courseCards = document.querySelectorAll('.course-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Set active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const filter = button.dataset.filter;
-
-                courseCards.forEach(card => {
-                    const categories = card.dataset.category;
-                    if (filter === 'all' || categories.includes(filter)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+    // This function applies a filter and updates the button styles
+    function applyFilter(filterValue) {
+        // Update the active state on the buttons
+        filterButtons.forEach(btn => {
+            if (btn.dataset.filter === filterValue) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
         });
-    </script>
 
+        // Loop through cards and show/hide them based on the filter
+        courseCards.forEach(card => {
+            const categories = card.dataset.category;
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Add click listeners to all filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+            applyFilter(filter);
+        });
+    });
+
+    // --- NEW CODE ---
+    // This part runs when the page first loads
+    window.addEventListener('DOMContentLoaded', () => {
+        // Get the tag from the URL (e.g., #online becomes "online")
+        const hash = window.location.hash.substring(1);
+        
+        // If the tag is 'online' or 'offline', apply that filter
+        if (hash === 'online' || hash === 'offline') {
+            applyFilter(hash);
+        }
+    });
+</script>
+
+<script src="main.js"></script>
 </body>
 </html>

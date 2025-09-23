@@ -35,16 +35,16 @@ section { padding: 60px 0; }
 
 /* --- Layout Styles: Header & Footer --- */
 .header { background-color: var(--primary-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
-.navbar { display: flex; justify-content: space-between; align-items: center; }
-.logo-img { height: 50px; width: auto; }
-.nav-links { display: flex; list-style: none; align-items: center; margin: 0; padding: 0; }
+.navbar { display: flex; align-items: center; }
+.logo-img { height: 50px; width: auto; flex-shrink: 0; }
+.nav-links { display: flex; list-style: none; align-items: center; margin: 0 auto; padding: 0; }
 .nav-links li { margin: 0 15px; }
 .nav-links a { color: var(--light-text-color); text-decoration: none; font-weight: 700; transition: color 0.3s; }
 .nav-links a:hover { color: var(--accent-color); }
 .nav-auth { display: flex; align-items: center; }
 .hamburger { display: none; cursor: pointer; }
 .hamburger .bar { display: block; width: 25px; height: 3px; margin: 5px auto; transition: all 0.3s ease-in-out; background-color: white; }
-.nav-menu-mobile { display: none; } /* Mobile menu container is hidden initially */
+.nav-menu-mobile { display: none; }
 
 .footer { background-color: #051324; color: var(--secondary-color); padding: 50px 0; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
@@ -68,6 +68,9 @@ section { padding: 60px 0; }
 .enroll-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; }
 .password-wrapper { position: relative; }
 .password-toggle-icon { position: absolute; top: 50%; right: 15px; transform: translateY(-50%); font-size: 0.9rem !important; color: #888; cursor: pointer; }
+.auth-toggle-buttons { display: flex; margin-bottom: 20px; }
+.auth-btn { flex: 1; padding: 15px; font-size: 1.1rem; font-weight: 700; border: none; background-color: #f8f9fa; color: var(--text-color); cursor: pointer; border-bottom: 3px solid #ddd; }
+.auth-btn.active { color: var(--primary-color); border-bottom: 3px solid var(--accent-color); }
 
 
 /* --- Responsive Design --- */
@@ -75,7 +78,7 @@ section { padding: 60px 0; }
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
 
-    /* Hide desktop navigation */
+    /* Hide desktop navigation and show hamburger */
     .nav-links { display: none; }
     .nav-auth { display: none; }
     .hamburger { display: block; }

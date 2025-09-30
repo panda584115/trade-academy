@@ -37,7 +37,10 @@ img { max-width: 100%; height: auto; display: block; }
 /* --- Header & Navigation --- */
 .header { background-color: var(--primary-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
 .navbar { display: flex; justify-content: space-between; align-items: center; }
-.logo-img { height: 50px; width: auto; }
+.logo-img {
+    height: 80px; /* Adjust logo size here - increased from 50px */
+    width: auto;
+}
 .nav-menu { display: flex; align-items: center; gap: 30px; }
 .nav-links { display: flex; list-style: none; align-items: center; margin: 0; padding: 0; gap: 30px; }
 .nav-links a { color: var(--light-text-color); text-decoration: none; font-weight: 700; }
@@ -151,4 +154,5 @@ img { max-width: 100%; height: auto; display: block; }
     .hero-buttons { flex-direction: column; gap: 15px; }
     .about-grid, .course-grid, .footer-grid, .features-grid, .contact-grid, .principles-grid { grid-template-columns: 1fr; }
 }
+
 

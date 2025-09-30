@@ -1,152 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Future Bulls</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Future Bulls</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+
 <header class="header">
-    <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Future Bulls Logo" class="logo-img">
-            </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div id="auth-container" class="nav-auth">
-                </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </div>
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Future Bulls Logo" class="logo-img">
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div id="auth-container" class="nav-auth"></div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
 </header>
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <p>We're here to help. Reach out with any questions.</p>
-            </div>
-        </section>
 
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Get In Touch</h3>
-                        <p>Have questions about our courses or the enrollment process? We'd love to hear from you.</p>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Our Location</h4>
-                                <p>123 Trading Street, Bailhongal, Karnataka, 591102</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Call Us</h4>
-                                <p>+91 98765 43210</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Us</h4>
-                                <p>support@tradingacademy.com</p>
-                            </div>
-                        </div>
-                         <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Business Hours</h4>
-                                <p>Monday - Saturday: 10:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Send a Message</h3>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="map-section">
-            <div class="container">
-                <h2>Find Us in Bailhongal</h2>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/place/Bailhongal,+Karnataka+591102/@15.8171262,74.8352146,14z/data=!3m1!4b1!4m6!3m5!1s0x3bbf51e6818d6c93:0xe5c5a990cacf6619!8m2!3d15.8132997!4d74.8565613!16s%2Fg%2F11bc6dplrx?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D" width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </section>
+<main>
+  <!-- Contact Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Get in touch with Future Bulls today.</p>
+    </div>
+  </section>
 
-    </main>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, feel free to reach out using the details below or by filling out the form.</p>
+        <p><i class="fas fa-map-marker-alt"></i> Your Address, Bailhongal, Karnataka</p>
+        <p><i class="fas fa-phone"></i> +91 8495054184</p>
+        <p><i class="fas fa-envelope"></i> support@futurebulls.com</p>
+      </div>
 
-    <footer class="footer">
-       </footer>
-       <script>
-    const contactForm = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
 
-    contactForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
 
-        try {
-            // URL UPDATED HERE
-            const response = await fetch('https://trade-academy.onrender.com/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-            const result = await response.json();
-            if (response.ok) {
-                formMessage.textContent = result.message;
-                formMessage.style.color = 'green';
-                contactForm.reset();
-            } else {
-                formMessage.textContent = 'Error: ' + result.message;
-                formMessage.style.color = 'red';
-            }
-        } catch (error) {
-            formMessage.textContent = 'A network error occurred. Please try again.';
-            formMessage.style.color = 'red';
-        }
-    });
-</script>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
 
-<script src="main.js"></script>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Future Bulls</h3>
+        <p>Empowering traders with knowledge and confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html">Login / Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Your Address, Bailhongal, Karnataka</p>
+        <p><i class="fas fa-phone"></i> +91 8495054184</p>
+        <p><i class="fas fa-envelope"></i> support@futurebulls.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Future Bulls. All Rights Reserved.</p>
+      <p class="disclaimer">Disclaimer: Trading involves substantial risk and is not suitable for all investors. All content is for educational purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+
 </body>
 </html>

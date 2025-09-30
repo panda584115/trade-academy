@@ -1,29 +1,16 @@
-// main.js
-
 document.addEventListener("DOMContentLoaded", function() {
-    // --- 1. ELEMENT SELECTION ---
+    // --- Hamburger Menu Logic ---
     const hamburger = document.getElementById('hamburger');
-    const desktopNavLinks = document.getElementById('nav-links');
-    const desktopAuthContainer = document.getElementById('auth-container');
-
-    // --- 2. DYNAMIC MOBILE MENU CREATION ---
-    // Create a container for the mobile menu that will slide in
+    const navMenu = document.getElementById('nav-menu');
+    
+    // Create the mobile menu container and clone content into it
     const mobileMenu = document.createElement('div');
     mobileMenu.className = 'nav-menu-mobile';
-    document.body.appendChild(mobileMenu);
-
-    // Clone the desktop links and auth container into the mobile menu
-    if (desktopNavLinks) {
-        mobileMenu.appendChild(desktopNavLinks.cloneNode(true));
-    }
-    if (desktopAuthContainer) {
-        const mobileAuthContainer = document.createElement('div');
-        mobileAuthContainer.id = 'auth-container-mobile'; // Give it a unique ID
-        mobileAuthContainer.className = 'nav-auth';
-        mobileMenu.appendChild(mobileAuthContainer);
+    if(navMenu) {
+        mobileMenu.innerHTML = navMenu.innerHTML;
+        document.body.appendChild(mobileMenu);
     }
     
-    // --- 3. HAMBURGER MENU LOGIC ---
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -31,14 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // --- 4. DYNAMIC AUTH BUTTON LOGIC ---
-    // This function populates a container with the correct auth buttons
+    // --- Dynamic Auth Button Logic ---
     function populateAuthButtons(container, isMobile) {
+        if (!container) return;
         const token = localStorage.getItem('token');
         const logoutId = isMobile ? 'logout-button-nav-mobile' : 'logout-button-nav';
-
+        
         if (token) {
-            // If the token exists, show Dashboard and Logout
             container.innerHTML = `
                 <a href="dashboard.html" class="btn-secondary-nav">Dashboard</a>
                 <a href="#" id="${logoutId}" class="btn btn-primary">Logout</a>
@@ -48,25 +34,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 logoutButton.addEventListener('click', (event) => {
                     event.preventDefault();
                     localStorage.removeItem('token');
-                    window.location.href = 'index.html'; // Redirect to home after logout
+                    window.location.href = 'index.html';
                 });
             }
         } else {
-            // If no token, show Login / Register
-            container.innerHTML = `
-                <a href="auth.html" class="btn btn-primary">Login / Register</a>
-            `;
+            container.innerHTML = `<a href="auth.html" class="btn btn-primary">Login / Register</a>`;
         }
     }
 
-    // Populate the desktop auth buttons
-    if (desktopAuthContainer) {
-        populateAuthButtons(desktopAuthContainer, false);
-    }
-
-    // Populate the mobile auth buttons
-    const mobileAuthContainer = document.getElementById('auth-container-mobile');
-    if (mobileAuthContainer) {
-        populateAuthButtons(mobileAuthContainer, true);
-    }
+    // Populate both the desktop and mobile auth buttons
+    populateAuthButtons(document.getElementById('auth-container'), false);
+    populateAuthButtons(mobileMenu.querySelector('.nav-auth'), true);
 });
